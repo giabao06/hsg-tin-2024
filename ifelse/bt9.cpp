@@ -24,4 +24,5 @@ int checkall(int m, int y){
 int main(){
     cin >> m >> y;
     if (checkall(m,y)==-1) {cout << "INVALID";} else cout << checkall(m,y);
+    return 0;
 }
