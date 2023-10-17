@@ -14,6 +14,7 @@ Các bạn có thể sử dụng sử dụng if else để giải quyết hoặc
 Lưu ý: Các phép chia đều là chia nguyên
 */
 
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -21,6 +22,9 @@ using namespace std;
 long long a,b;
 
 int main(){
-    cin >> a >> b;
-    int an=a, bn=b;
+    cin >> a >> b; long long n1=a, n2=a;
+    while (n1%b!=0) {n1--;}
+    while (n2%b!=0) {n2++;}
+    cout << n1 << endl << n2;
+    return 0;
 }
