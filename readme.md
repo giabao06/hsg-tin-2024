@@ -21,3 +21,6 @@ I do plan to add my own notes here, but will consider it after the contest is do
 | Session # | Date       | Main theme    | Exercise folder |
 | :-------: | :--:       | :--------:    | :-------------: |
 | 1         | 2023-10-07 | Init revision | `./ifelse`      | 
+| 2         | 2023-10-14 | For-while loop| `./forwhile`    |
+| 3         | 2023-10-01*| Number theory, functions | `./ltso-function` |
+| 4         | 2023-10-31 | Recursion     | `./dequy`       |
