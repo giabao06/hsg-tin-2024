@@ -1,4 +1,5 @@
 //Cho mảng số nguyên A[] gồm N phần tử, hãy tìm độ chênh lệch nhỏ nhất giữa 2 phần tử trong mảng.
+//note: this is also bt19, but smh I got 1 test case wrong
 
 #include <bits/stdc++.h>
 

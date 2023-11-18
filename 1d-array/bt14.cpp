@@ -10,14 +10,16 @@ long long gcd(long long x, long long y){
 }
 
 long long agcd(long long a[], long long n){
+    long long min=LONG_LONG_MAX;
+    for (int i=0; i<n; i++) {if (a[i]<min) min=a[i];}
     bool chk=true; long long res=-1;
-    for (long long i=0; i<n; i++) {if (a[i]%a[0]!=0) {chk=false; break;}}
-    if (chk) cout << a[0]; else {long long def=round(1.0*a[0]/2);
+    for (long long i=0; i<n; i++) {if (a[i]%min!=0) {chk=false;}}
+    if (chk) cout << min; else {long long def=round(0.5*min);
     for (long long i=1; i<def+1; i++) { chk=true;
-    for (long long j=0; j<n; j++) {if (a[j]%i!=0) chk=false; break;}
+    for (long long j=0; j<n; j++) {if (a[j]%i!=0) chk=false;}
     if (chk==true) res=i;}
     }
-    if (res!=-1) return res; else return -1;
+    return res;
 }
 
 int main(){
