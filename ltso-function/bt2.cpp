@@ -6,14 +6,19 @@
 using namespace std;
 
 bool sphenic(long long x){
-    int count=0;
-    while (count<=3 && x>1) {
-        if (x%2==0) {x=x/2; count++;} else
-        if (x%3==0) {x=x/3; count++;} else
-        if (x%5==0) {x=x/5; count++;} else
-        if (x%7==0) {x=x/7; count++;}
+    long long minPrime[x+1];
+    for (long long i=2; i*i<=x; ++i) {
+        if (minPrime[i]==0) {
+            for (long long j=i*i; j<=x; j+=i) {if (minPrime[j]==0) minPrime[j]=i;}}
     }
-    if (count==3) return true; else return false;
+    for (int i=2; i<=x; ++i) if (minPrime[i]==0) {minPrime[i]=i;}
+    vector<long long> res; int count=0;
+    while (x!=1) {
+        res.push_back(minPrime[x]);
+        x/=minPrime[x];
+        count++;
+    }
+    if (count+1<=3) return true; else return false;
 }
 
 int main(){

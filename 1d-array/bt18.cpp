@@ -9,7 +9,7 @@ void alist(long long a[], long long n) {
     long long i=0, j=1; bool prt[n]; for (int i=0; i<n; i++) {prt[i]=true;}
     while (i<n-1 && j<n) {
         if ((a[i]<0 && a[j]>0) || (a[i]>0 && a[j]<0)) {
-            if (prt[i]==true)cout << a[i] << char(32) << a[j];}
+            if (prt[i]==true) cout << a[i] << char(32) << a[j];}
         i++; j++;
     }
 }
